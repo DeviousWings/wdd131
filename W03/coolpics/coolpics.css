@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+    margin: 5px;
     padding: 0;
     box-sizing: border-box;
 }
@@ -72,6 +72,7 @@ nav.show {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
     padding: 20px;
+    justify-items: center;
 }
 
 figure {
@@ -79,6 +80,30 @@ figure {
     border: 2px solid var(--primary-color);
     padding: 1rem;
     background-color: #f9f9f9;
+    
+}
+
+#menu {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    text-decoration: underline;
+    transition: color .3s ease;
+}
+
+#menu:hover {
+    color: var(--accent-color); 
+    text-decoration: none; 
+}
+
+
+#menu:active {
+    color: var(--secondary-color); 
+    transform: scale(0.98); 
 }
 
 img {
@@ -92,11 +117,17 @@ footer {
     color: var(--text-light);
     text-align: center;
     padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 footer img {
     max-width: 150px;
     height: auto;
+    object-fit: cover;
+    display: block;
 }
 
 /* Mobile Responsiveness */
@@ -135,8 +166,10 @@ footer img {
     }
 
     nav {
+        display: flex;
         flex-direction: row;
         justify-content: center;
+        gap: 100px;
     }
 
     /* Hide the "Menu" button on larger screens */

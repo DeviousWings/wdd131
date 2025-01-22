@@ -41,6 +41,18 @@ main {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+#proves ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#proves li {
+    background-color: white;
+    margin: 5px 0;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 footer {
     text-align: center;
     background-color: #333;
