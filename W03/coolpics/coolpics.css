@@ -49,6 +49,7 @@ nav {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    color: var(--text-light);
 }
 
 nav a {
@@ -56,13 +57,16 @@ nav a {
     text-decoration: none;
     margin: 0.5rem 0;
     font-size: 1.2rem;
+    padding: 5px 10px;
 }
+
+
 
 nav a:hover {
     color: var(--accent-color);
+    text-decoration: none;
 }
 
-/* When the menu button is clicked, show the navigation */
 nav.show {
     display: block;
 }
@@ -87,11 +91,11 @@ figure {
     background-color: var(--secondary-color);
     color: var(--text-light);
     border: none;
-    font-size: 1rem;
+    font-size: 2rem;
     border-radius: 5px;
     cursor: pointer;
     padding: 5px;
-    text-decoration: underline;
+    text-decoration: none;
     transition: color .3s ease;
 }
 
@@ -142,6 +146,10 @@ footer img {
 
     }
 
+    nav {
+        gap: 100px;
+    }
+
     header h1 {
         font-size: 2rem;
     }
@@ -156,6 +164,7 @@ footer img {
 
     nav {
         flex-direction: row;
+        gap: 100px;
     }
 }
 
