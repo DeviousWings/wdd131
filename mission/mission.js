@@ -8,7 +8,7 @@ if (themeSelector) {
 
     if (selectedTheme === "dark") {
       document.body.className = "dark";
-      byuilogo.src = "pic/byui-logo_white.webdp";
+      byuilogo.src = "pic/byui_logo_dark.jpg";
     } else if (selectedTheme === "light") {
       document.body.className = "light";
       byuiLogo.src = "pic/byui-logo_blue.webp";

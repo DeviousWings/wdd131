@@ -79,12 +79,49 @@ nav.show {
     justify-items: center;
 }
 
+
+
 figure {
     margin: 0;
     border: 2px solid var(--primary-color);
     padding: 1rem;
     background-color: #f9f9f9;
     
+}
+
+.viewer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .75);
+    display: none;
+    z-index: 10;
+    display: grid;
+
+    place-items: center;
+}
+
+.viewer img {
+    max-height: 90%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+    border: 5px solid white; 
+    border-radius: 8px;
+}
+
+.viewer .close-viewer {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20; /* Ensure the close button is above everything */
 }
 
 #menu {
@@ -145,6 +182,37 @@ footer img {
         align-items: center;
 
     }
+
+    .viewer {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .75);
+        display: none;
+        z-index: 10;
+        display: grid;
+        place-items: center;
+    }
+    
+    .viewer img {
+        max-width: 90%;
+        max-height: 90%;
+        /* object-fit: contain; */
+    }
+    
+    .close-viewer {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+    
 
     nav {
         gap: 100px;
