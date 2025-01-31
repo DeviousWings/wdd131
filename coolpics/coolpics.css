@@ -58,6 +58,7 @@ nav a {
     margin: 0.5rem 0;
     font-size: 1.2rem;
     padding: 5px 10px;
+    display: block;
 }
 
 
@@ -226,13 +227,17 @@ footer img {
 /* Breakpoint for screens 700px and above */
 @media (min-width: 700px) {
     .gallery {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
 
     }
 
     nav {
         flex-direction: row;
         gap: 100px;
+    }
+
+    nav a {
+        display: initial;
     }
 }
 
