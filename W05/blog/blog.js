@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             rating: "⭐⭐⭐⭐"
         },
     ];
-    
+
     // Function to display books
     function displayBooks(books) {
         bookList.innerHTML = ""; // Clear the book list
@@ -106,7 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const query = searchInput.value.toLowerCase().trim();
         const filteredBooks = recentBooks.filter(book => 
             book.title.toLowerCase().includes(query) ||
-            book.genre.toLowerCase().includes(query)
+            book.genre.toLowerCase().includes(query) ||
+            (book.author && book.author.toLowerCase().includes(query))
         );
         displayBooks(filteredBooks);
     }

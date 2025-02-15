@@ -1,4 +1,4 @@
-/* Global Reset */
+/* ========== Global Reset & Typography ========== */
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +6,17 @@
     font-family: "Roboto", sans-serif;
 }
 
-/* Font Optimization */
-@font-face {
-    font-family: "Roboto";
-    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-    font-display: swap; /* Prevents layout shift from delayed font loading */
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto", sans-serif;
 }
 
-/* Header */
+/* ========== Header ========== */
 header {
     background-color: #8B1E3F;
     color: white;
@@ -27,11 +26,9 @@ header {
 
 header h1 {
     font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 
-/* Hide skip link until focused */
+/* Skip to Content */
 .skiptocontent a {
     position: absolute;
     top: -40px;
@@ -45,12 +42,11 @@ header h1 {
     font-size: 1rem;
 }
 
-/* Make visible when focused */
 .skiptocontent a:focus {
     top: 10px;
 }
 
-/* Navigation */
+/* ========== Navigation ========== */
 nav {
     background-color: #007BFF;
     padding: 10px 0;
@@ -62,11 +58,6 @@ nav ul {
     justify-content: center;
     gap: 15px;
     list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    line-height: 2.5;
 }
 
 nav ul li a {
@@ -83,20 +74,52 @@ nav ul li a:hover {
 }
 
 /* Responsive Navigation */
-@media (max-width: 600px) {
-    nav ul {
-        grid-template-columns: 1fr;
-        text-align: center;
+#nav-menu {
+    display: none;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+#nav-menu.show {
+    display: block;
+    opacity: 1;
+    height: auto;
+}
+
+#menu {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+    width: fit-content;
+    border-radius: 5px;
+}
+
+@media (min-width: 601px) {
+    button#menu {
+        display: none;
     }
 }
 
-/* Main Layout */
+/* ========== Main Layout ========== */
 main {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     gap: 20px;
     padding: 20px;
-    align-items: start;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
 }
 
 #placeholder {
@@ -106,63 +129,50 @@ main {
     text-align: center;
 }
 
-/* Responsive Layout */
-@media (max-width: 768px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Book Section */
+/* ========== Book Section ========== */
 #book {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
     text-align: center;
     background: #f9f9f9;
     padding: 20px;
     border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
 }
 
 #book-list {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 600px;
-    list-style: none;
-    padding: 20px;
-}
-
-.book-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
-    min-height: 500px; /* Ensures space is reserved for content */
+    width: 100%;
 }
 
+/* Book Items */
 .book-item {
-    min-height: 320px; /* Reserved height to prevent content shift */
+    min-height: 350px;
     padding: 15px;
-    text-align: center;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
+/* Book Cover Images */
 .book-cover {
-    display: block;
     width: 150px;
     height: 220px;
     object-fit: cover;
-    aspect-ratio: 150 / 220; /* Maintains ratio to prevent shifting */
+    display: block;
+    margin: 0 auto;
 }
 
 /* Reserve space for lazy-loaded images */
 .book-cover[loading="lazy"] {
-    background: #ddd; /* Placeholder background to prevent reflow */
+    background: #ddd;
 }
 
 #book-list article:not(:last-child) {
@@ -175,7 +185,7 @@ main {
     border-radius: 5px;
 }
 
-/* Form Styling */
+/* ========== Forms ========== */
 form {
     display: flex;
     flex-direction: column;
@@ -203,46 +213,11 @@ button:hover {
     background-color: #70162E;
 }
 
-/* Footer */
+/* ========== Footer ========== */
 footer {
     text-align: center;
     background-color: #333;
     color: white;
     padding: 10px;
     margin-top: 20px;
-}
-
-/* Navigation Menu Toggle */
-#nav-menu {
-    display: none;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease-in-out;
-}
-
-#nav-menu.show {
-    display: block;
-    opacity: 1;
-    height: auto;
-}
-
-#menu {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-    display: block;
-    margin: 10px auto;
-    text-align: center;
-    width: fit-content;
-    border-radius: 5px;
-}
-
-@media (min-width: 601px) {
-    button#menu {
-        display: none; 
-    }
 }
