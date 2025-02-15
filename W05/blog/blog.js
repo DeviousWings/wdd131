@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookList = document.getElementById("book-list");
     const menuButton = document.getElementById("menu");
     const navMenu = document.getElementById("nav-menu");
+    const searchInput = document.getElementById("search-input");
+    const searchButton = document.getElementById("search-button");
 
     // Array of recent books
     const recentBooks = [
@@ -40,10 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    // Generate HTML for each book
-    if (bookList) {
-        recentBooks.forEach(book => {
-            const bookItem = document.createElement("li");
+    // Function to display books
+    function displayBooks(books) {
+        bookList.innerHTML = ""; // Clear current list
+        books.forEach(book => {
+            const bookItem = document.createElement("article");
             bookItem.classList.add("book-item");
             bookItem.innerHTML = `
                 <img src="${book.cover}" alt="${book.imgAlt || book.title} cover" class="book-cover">
@@ -57,6 +60,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Initial display of books
+    displayBooks(recentBooks);
+
     // Toggle navigation menu visibility on button click
     if (menuButton && navMenu) {
         menuButton.addEventListener("click", () => {
@@ -67,14 +73,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // Handle menu visibility on window resize
     function handleResize() {
         if (window.innerWidth > 600) {
-            navMenu.classList.add("show");  // Show the nav menu
-            menuButton.style.display = "none";  // Hide the menu button
+            navMenu.classList.add("show");
+            menuButton.style.display = "none";
         } else {
-            navMenu.classList.remove("show"); // Hide the nav menu initially
-            menuButton.style.display = "block";  // Show the menu button
+            navMenu.classList.remove("show");
+            menuButton.style.display = "block";
         }
     }
 
     handleResize();
     window.addEventListener("resize", handleResize);
+
+    // Search Functionality
+    function searchBooks() {
+        const query = searchInput.value.toLowerCase().trim();
+        const filteredBooks = recentBooks.filter(book => 
+            book.title.toLowerCase().includes(query) ||
+            book.genre.toLowerCase().includes(query)
+        );
+        displayBooks(filteredBooks);
+    }
+
+    searchButton.addEventListener("click", searchBooks);
+    searchInput.addEventListener("keyup", (event) => {
+        if (event.key === "Enter") {
+            searchBooks();
+        }
+    });
 });
