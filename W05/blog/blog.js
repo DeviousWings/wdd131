@@ -7,6 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Array of recent books
     const recentBooks = [
+
+        {
+            id: 4,
+            title: "Dune",
+            date: "August 1, 1965",
+            description: "A sci-fi classic that explores politics, religion, and the struggles of survival in a desert planet ruled by spice.",
+            author: "Frank Herbert",
+            genre: "Science Fiction",
+            ageRange: "14+",
+            rating: "⭐⭐⭐⭐⭐",
+            cover: "https://upload.wikimedia.org/wikipedia/en/d/de/Dune-Frank_Herbert_%281965%29_First_edition.jpg",
+            imgAlt: "Book cover for Dune"
+        },
         {
             id: 1,
             title: "Leviathan Wakes",
@@ -39,15 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
             ageRange: "12-16",
             genre: "Fantasy",
             rating: "⭐⭐⭐⭐"
-        }
+        },
     ];
+
 
     // Function to display books
     function displayBooks(books) {
-        bookList.innerHTML = ""; // Clear current list
+        bookList.innerHTML = ""; // Clear the book list
         books.forEach(book => {
+            // Create a new article element
             const bookItem = document.createElement("article");
             bookItem.classList.add("book-item");
+
+            // Template string for article content
             bookItem.innerHTML = `
                 <img src="${book.cover}" alt="${book.imgAlt || book.title} cover" class="book-cover">
                 <h3>${book.title}</h3>
@@ -56,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p><strong>Rating:</strong> ${book.rating}</p>
                 <p><em>${book.description}</em></p>
             `;
+            // Append the new article to the container
             bookList.appendChild(bookItem);
         });
     }
