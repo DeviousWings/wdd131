@@ -54,8 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
             rating: "⭐⭐⭐⭐"
         },
     ];
-
-
+    
     // Function to display books
     function displayBooks(books) {
         bookList.innerHTML = ""; // Clear the book list

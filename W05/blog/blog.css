@@ -1,8 +1,16 @@
+/* Global Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+}
+
+/* Font Optimization */
+@font-face {
+    font-family: "Roboto";
+    src: url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+    font-display: swap; /* Prevents layout shift from delayed font loading */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -98,7 +106,7 @@ main {
     text-align: center;
 }
 
-/* Responsive Layout : Stack Sections on Smaller Screens */
+/* Responsive Layout */
 @media (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
@@ -120,52 +128,52 @@ main {
 #book-list {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     width: 100%;
-    max-width: 600px; 
+    max-width: 600px;
     list-style: none;
     padding: 20px;
 }
 
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    min-height: 500px; /* Ensures space is reserved for content */
+}
+
 .book-item {
-    margin-bottom: 20px;
+    min-height: 320px; /* Reserved height to prevent content shift */
     padding: 15px;
+    text-align: center;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
- 
-    /* display: flex;
-    gap: 10px;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px; */
+}
+
+.book-cover {
+    display: block;
+    width: 150px;
+    height: 220px;
+    object-fit: cover;
+    aspect-ratio: 150 / 220; /* Maintains ratio to prevent shifting */
+}
+
+/* Reserve space for lazy-loaded images */
+.book-cover[loading="lazy"] {
+    background: #ddd; /* Placeholder background to prevent reflow */
 }
 
 #book-list article:not(:last-child) {
     margin-bottom: 20px;
 }
 
-
 #book-cover {
     display: block;
     margin: 0 auto 10px;
     border-radius: 5px;
 }
-
-/* Reviews Section
-#reviews {
-    background: #f1f1f1;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-/* Add Review Section */
-#add-review {
-    background: #e8e8e8;
-    padding: 20px;
-    border-radius: 8px;
-} */
 
 /* Form Styling */
 form {
@@ -204,12 +212,13 @@ footer {
     margin-top: 20px;
 }
 
+/* Navigation Menu Toggle */
 #nav-menu {
-    display: none; /* Start hidden */
+    display: none;
     opacity: 0;
     height: 0;
     overflow: hidden;
-    transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 #nav-menu.show {
@@ -225,10 +234,10 @@ footer {
     border: none;
     cursor: pointer;
     font-size: 18px;
-    display: block; /* Ensures it takes full width */
-    margin: 10px auto; /* Centers it horizontally */
+    display: block;
+    margin: 10px auto;
     text-align: center;
-    width: fit-content; /* Ensures it doesn't stretch too much */
+    width: fit-content;
     border-radius: 5px;
 }
 
