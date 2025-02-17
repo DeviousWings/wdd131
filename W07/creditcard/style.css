@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #ffb242;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#amount {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.card-container {
+    display: grid;
+    position: relative;
+    width: 350px;
+    height: 220px;
+    perspective: 1000px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    background-color: #0634ff;
+    color: white;
+    transition: transform 0.6s;
+    backface-visibility: hidden;
+}
+/* Card Front */
+#card-front {
+    z-index: 2;
+}
+
+.card input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#card-name {
+    width: 60%;
+    display: inline-block;   
+}
+
+.card label {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#expiry {
+    width: 30%;
+    display: inline-block;
+}
+
+
+/* Card Back */
+
+#card-back {
+    z-index: 1;
+    background-color: #002b80;
+    transform: translate(150px, 50px)
+}
+
+#cvv {
+    width: 60px;
+    margin-bottom: 0;
+
+}
+
+
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
