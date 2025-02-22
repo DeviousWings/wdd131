@@ -6,6 +6,7 @@
     <title>Credit Card Info</title>
     <link rel="stylesheet" href="style.css">
     <script src="ccform.js" defer></script>
+    <link rel="icon" type="image/png" href="pics/favicon.png" >
 </head>
 <body>
     <main>
@@ -22,22 +23,24 @@
 
                     <label for="card-number">Card Number</label>
                     <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required 
-                           maxlength="16" pattern="\d{16}" title="Card number must be 16 digits">
+                        maxlength="16" pattern="\d{16}" title="Card number must be 16 digits">
 
-                    <div id="cardholder-container">
-                        <label for="card-name">Cardholder Name</label>
-                        <input type="text" id="card-name" placeholder="John Doe" required>
-                    </div>
+                    <div id="card-details">
+                        <div id="cardholder-container">
+                            <label for="card-name">Cardholder Name</label>
+                            <input type="text" id="card-name" placeholder="John Doe" required>
+                        </div>
 
-                    <div id="exp-container">
-                        <label for="expiry">Expiration Date</label>
-                        <input type="text" id="month" placeholder="MM" required maxlength="2" pattern="\d{2}"
-                               title="Enter two-digit month (01-12)">
-                        <input type="text" id="year" placeholder="YY" required maxlength="2" pattern="\d{2}"
-                               title="Enter last two digits of the year">
-                    </div>
+                        <div id="exp-container">
+                            <label for="expiry">Expiration Date</label>
+                            <div id="exp-inputs">
+                                <input type="text" id="card-month" placeholder="MM" required maxlength="2" pattern="\d{2}"
+                                       title="Enter two-digit month (01-12)">
+                                <input type="text" id="card-year" placeholder="YY" required maxlength="2" pattern="\d{2}"
+                                       title="Enter last two digits of the year">
+                            </div>
+                        </div>
                 </div>
-
                 <!-- Card Back -->
                 <div id="card-back">
                     <div id="card-stripe"></div>
