@@ -83,6 +83,24 @@ nav {
     font-size: 1.2em;
 }
 
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.social img {
+    width: 24px;  /* Adjusted icon size */
+    height: 24px;  /* Ensures uniform sizing */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social img:hover {
+    transform: scale(1.1);  /* Slight hover effect */
+}
+
+
 /* Responsive Design */
 @media screen and (min-width: 600px) {
     #recipes-container {
