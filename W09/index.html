@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Site</title>
+    <title>Recipe Book</title>
 
     <!-- Social Media Meta Tags -->
-    <meta property="og:title" content="Recipe Site">
+    <meta property="og:title" content="Recipe Book">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Find delicious recipes to try at home!">
     <meta property="og:image" content="images/recipe-book.png">
@@ -23,7 +23,7 @@
     <header>
         <div class="logo">
             <img src="images/recipe-book.png" alt="Recipe Book Logo">
-            <h1>Recipe Site</h1>
+            <h1>Recipe Book</h1>
         </div>
         <nav>
             <form id="search-form">
@@ -32,10 +32,13 @@
             </form>
         </nav>
     </header>
+    
 
     <main>
-        <h2>Featured Recipes</h2>
-        <div id="recipes-container"></div>
+        <div class="recipe-layout">
+            <!-- Recipe will be dynamically loaded here -->
+            <div id="recipe-display"></div>
+        </div>
     </main>
 
     <footer>
