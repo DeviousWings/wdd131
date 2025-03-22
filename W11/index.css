@@ -1,0 +1,60 @@
+:root {
+    --primary-color: #1D3C60;
+    --secondary-color: #0E1737;
+    --accent1-color: #6D6875;
+    --accent2-color: #A8DADC;
+    --background: #F9F9F9;
+    --text: #1E1E1E;
+  
+    --headline-color-on-white: #1D3C60;
+    --headline-color-on-color: #FFFFFF;
+  
+    --heading-font: 'Poppins', sans-serif;
+    --paragraph-font: 'Roboto', sans-serif;
+  
+    --paragraph-color: #333;
+    --paragraph-color-on-color: #F9F9F9;
+    --paragraph-background-color: #1D3C60;
+  
+    --nav-background-color: #0E1737;
+    --nav-link-color: #F9F9F9;
+    --nav-hover-link-color: #1D3C60;
+    --nav-hover-background-color: #A8DADC;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-background-color); 
+    padding: 1em 2em;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .nav-brand {
+    font-size: 1.5em;
+    color: var(--nav-link-color); 
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2em;
+  }
+  
+  .nav-links a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    background-color: var(--nav-hover-background-color); 
+    color: var(--nav-hover-link-color); 
+    padding: 0.5em;
+    border-radius: 4px;
+  }
+  
