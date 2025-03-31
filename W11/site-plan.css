@@ -1,33 +1,24 @@
-/* if you are using any Google fonts change the font names below to your fonts. 
-Any spaces in your font name should be replaced with a +. 
-Fonts are separated by a | */
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
 
 :root {
-    --primary-color: #1D3C60;
-    --secondary-color: #0E1737;
-    --accent1-color: #6D6875;
-    --accent2-color: #A8DADC;
-    --background: #F9F9F9;
-    --text: #1E1E1E;
-  
-    --headline-color-on-white: #1D3C60;
-    --headline-color-on-color: #FFFFFF;
-  
-    --heading-font: 'Poppins', sans-serif;
-    --paragraph-font: 'Roboto', sans-serif;
-  
-    --paragraph-color: #333;
-    --paragraph-color-on-color: #F9F9F9;
-    --paragraph-background-color: #1D3C60;
-  
-    --nav-background-color: #0E1737;
-    --nav-link-color: #F9F9F9;
-    --nav-hover-link-color: #1D3C60;
-    --nav-hover-background-color: #A8DADC;
-  }
-
-/*  Look around below...but DON'T CHANGE ANYTHING! */
+  --primary-color: #0B0C2A;
+  --secondary-color: #5D3FD3;
+  --accent1-color: #E63946;
+  --accent2-color: #A8DADC;
+  --background: #121212;
+  --text: #F1F1F1;
+  --headline-color-on-light: #0B0C2A;
+  --headline-color-on-dark: #F1F1F1;
+  --heading-font: 'Poppins', sans-serif;
+  --paragraph-font: 'Roboto', sans-serif;
+  --paragraph-color-on-light: #333333;
+  --paragraph-color-on-dark: #F9F9F9;
+  --paragraph-background-color: #1D3C60;
+  --nav-background-color: #0B0C2A;
+  --nav-link-color: #F1F1F1;
+  --nav-hover-link-color: #A8DADC;
+  --nav-hover-background-color: #1D3C60;
+}
 
 body {
   max-width: 1200px;
@@ -46,7 +37,7 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  color: var(--headline-color-on-white);
+  color: var(--headline-color-on-light);
 }
 h2 {
   text-align: center;
@@ -59,17 +50,16 @@ hr {
 header {
   padding: 1em;
   text-align: center;
-  color: var(--paragraph-color-on-color);
+  color: var(--paragraph-color-on-dark);
   background-color: var(--paragraph-background-color);
 }
 header > h1,
 header > h2 {
-  color: var(--headline-color-on-color);
+  color: var(--headline-color-on-dark);
 }
-
 p {
   font-family: var(--paragraph-font);
-  color: var(--paragraph-color);
+  color: var(--paragraph-color-on-light);
   padding: 1em;
 }
 .colors {
@@ -85,7 +75,6 @@ p {
   width: 25%;
   height: 3em;
 }
-
 .primary {
   background-color: var(--primary-color);
 }
@@ -98,21 +87,17 @@ p {
 .accent2 {
   background-color: var(--accent2-color);
 }
-
 .background {
-    background-color: var(--background);
-  }
-
+  color: white;
+  background-color: var(--background);
+}
 .text {
-    color: white;
-    background-color: var(--text);
-  }
-
+  background-color: var(--text);
+}
 p.colored {
   background-color: var(--paragraph-background-color);
-  color: var(--paragraph-color-on-color);
+  color: var(--paragraph-color-on-dark);
 }
-
 nav {
   background-color: var(--nav-background-color);
   line-height: 3em;
@@ -137,11 +122,9 @@ nav a:hover {
   color: var(--nav-hover-link-color);
   background-color: var(--nav-hover-background-color);
 }
-
 .sitemap {
   display: grid;
   justify-content: center;
-
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 3em 1.5em 1.5em 3em;
   grid-template-areas:
@@ -163,23 +146,15 @@ nav a:hover {
   background-color: #ccc;
   line-height: 3em;
 }
-.sm-page3 {
-  grid-area: page3;
-  background-color: #ccc;
-  line-height: 3em;
-}
-
 .top {
   grid-area: top;
   border-left: 1px solid;
 }
-
 .left {
   grid-area: left;
   border-top: 1px solid;
   border-left: 1px solid;
 }
-
 .right {
   grid-area: right;
   border-top: 1px solid;
