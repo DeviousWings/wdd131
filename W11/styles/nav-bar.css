@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #0B0C2A;
+  --primary-color: #1D3C60;
   --secondary-color: #5D3FD3;
   --accent1-color: #E63946;
   --accent2-color: #A8DADC;
@@ -18,9 +18,10 @@
 
   --nav-background-color: #0B0C2A;
   --nav-link-color: #F1F1F1;
-  --nav-hover-link-color: #1D3C60;
-  --nav-hover-background-color: #A8DADC;
+  --nav-hover-link-color: #A8DADC;
+  --nav-hover-background-color: #1D3C60;
 }
+
 
 .navbar {
     display: flex;
