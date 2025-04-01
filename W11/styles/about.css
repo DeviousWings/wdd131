@@ -1,26 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato");
 :root {
-    --primary-color: #1D3C60;
-    --secondary-color: #0E1737;
-    --accent1-color: #6D6875;
-    --accent2-color: #A8DADC;
-    --background: #F9F9F9;
-    --text: #1E1E1E;
-  
-    --headline-color-on-white: #1D3C60;
-    --headline-color-on-color: #FFFFFF;
-  
-    --heading-font: 'Poppins', sans-serif;
-    --paragraph-font: 'Roboto', sans-serif;
-  
-    --paragraph-color: #333;
-    --paragraph-color-on-color: #F9F9F9;
-    --paragraph-background-color: #1D3C60;
-  
-    --nav-background-color: #0E1737;
-    --nav-link-color: #F9F9F9;
-    --nav-hover-link-color: #1D3C60;
-    --nav-hover-background-color: #A8DADC;
+  --primary-color: #1D3C60;
+  --secondary-color: #5D3FD3;
+  --accent1-color: #E63946;
+  --accent2-color: #A8DADC;
+  --background: #121212;
+  --text: #F1F1F1;
+
+  --headline-color-on-light: #0B0C2A;
+  --headline-color-on-dark: #F1F1F1;
+
+  --heading-font: 'Poppins', sans-serif;
+  --paragraph-font: 'Roboto', sans-serif;
+
+  --paragraph-color-on-light: #333333;
+  --paragraph-color-on-dark: #F9F9F9;
+  --paragraph-background-color: #1D3C60;
+
+  --nav-background-color: #0B0C2A;
+  --nav-link-color: #F1F1F1;
+  --nav-hover-link-color: #A8DADC;
+  --nav-hover-background-color: #1D3C60;
 }
 
 * {
@@ -43,7 +43,7 @@
   h5,
   h6 {
     font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
+    color: var(--headline-color-on-dark);
   }
 
 .about {
@@ -77,16 +77,16 @@
   .about-projects {
     margin-top: 4em;
     padding: 2em;
-    background-color: var(--background);
+    background-color: var(--accent2-color);
     text-align: center;
   }
   
-  .about-projects h2 {
+  /* .about-projects h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     font-size: 2em;
     margin-bottom: 1.5em;
-  }
+  } */
   
   .about-project-grid {
     display: grid;
@@ -97,7 +97,7 @@
   }
   
   .about-project-card {
-    background-color: #fff;
+    background-color: var(--background);
     border: 1px solid var(--accent1-color);
     padding: 1.5em;
     border-radius: 10px;
@@ -110,12 +110,12 @@
     transform: translateY(-5px);
   }
   
-  .about-project-card h3 {
+  /* .about-project-card h3 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     font-size: 1.3em;
     margin-bottom: 0.5em;
-  }
+  } */
   
   .about-project-card p {
     font-family: var(--paragraph-font);

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@400;500&display=swap");
 
 :root {
-  --primary-color: #0B0C2A;
+  --primary-color: #1D3C60;
   --secondary-color: #5D3FD3;
   --accent1-color: #E63946;
   --accent2-color: #A8DADC;
@@ -31,8 +31,6 @@
   }
 
  html, body {
-    background-color: var(--background);
-    color: var(--text);
     margin: 0;
     padding: 0;
     height: 100%;
@@ -48,7 +46,6 @@
   h5,
   h6 {
     font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
   }
 
   
@@ -116,7 +113,7 @@
     margin-top: 1em;
     padding: 0.75em 1.5em;
     background-color: var(--accent2-color);
-    color: var(--nav-hover-link-color);
+    color: var(--nav-background-color);
     text-decoration: none;
     font-weight: 600;
     border-radius: 5px;
@@ -178,7 +175,7 @@
 
 .projects {
     padding: 4em 2em;
-    background-color: var(--background);
+    background-color: var(--accent2-color);
     color: var(--text);
     text-align: center;
   }
